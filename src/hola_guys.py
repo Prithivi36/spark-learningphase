@@ -1,3 +1,8 @@
 from pyspark.sql import SparkSession
 
-SparkSession.builder
+spark = SparkSession.builder\
+    .appName("hola_app").master("local[*]")\
+    .getOrCreate()
+
+print(spark.version)
+print(spark)
